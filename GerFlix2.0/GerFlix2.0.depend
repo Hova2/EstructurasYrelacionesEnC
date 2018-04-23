@@ -5,9 +5,29 @@
 1524491806 source:c:\test\github\estructurasyrelacionesenc\gerflix2.0\usuario.c
 	"usuario.h"
 
-1524486371 source:c:\test\github\estructurasyrelacionesenc\gerflix2.0\usuarioserie.c
+1524493447 source:c:\test\github\estructurasyrelacionesenc\gerflix2.0\usuarioserie.c
+	"usuarioSerie.h"
 
 1524491288 c:\test\github\estructurasyrelacionesenc\gerflix2.0\serie.h
 
 1524491910 c:\test\github\estructurasyrelacionesenc\gerflix2.0\usuario.h
+
+1524494181 source:c:\test\github\estructurasyrelacionesenc\gerflix2.0\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	"serie.h"
+	"usuario.h"
+	"usuarioSerie.h"
+
+1524493517 c:\test\github\estructurasyrelacionesenc\gerflix2.0\usuarioserie.h
+
+1524494239 source:c:\test\github\estructurasyrelacionesenc\gerflix2.0\main.c
+	<stdio.h>
+	<stdlib.h>
+	"serie.h"
+	"usuario.h"
+	"usuarioSerie.h"
+	"funciones.h"
+
+1524493797 c:\test\github\estructurasyrelacionesenc\gerflix2.0\funciones.h
 
