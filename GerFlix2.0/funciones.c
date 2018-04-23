@@ -135,3 +135,71 @@ void mostrarSerieUsuario(eSerie listaSerie[],eUsuario listaUsuario[],eUsuarioSer
         printf("No existe la serie!!!\n");
     }
 }
+
+void mostrarTopTres(eSerie listaSerie[],eUsuarioSerie listaUsuarioSerie[]){
+    eSerieContador contSerie[TSERIE];
+    int mayorUno=INT_MIN;
+    int mayorDos=INT_MIN;
+    int mayorTres=INT_MIN;
+
+    for(int i=0;i<TSERIE;i++){
+        contSerie[i].idSerie=listaSerie[i].idSerie;
+        contSerie[i].cont=0;
+    }
+    for(int i=0;i<TSERIE;i++){
+        for(int j=0;j<TUSUARIOSERIE;j++){
+            if(listaSerie[i].idSerie==listaUsuarioSerie[j].idSerie){
+                contSerie[i].cont++;
+            }
+        }
+    }
+    for(int i=0;i<TSERIE;i++){
+        if(contSerie[i].cont>mayorUno){
+            mayorUno=contSerie[i].cont;
+        }
+    }
+    for(int i=0;i<TSERIE;i++){
+        if(contSerie[i].cont>mayorDos && contSerie[i].cont!=mayorUno){
+            mayorDos=contSerie[i].cont;
+        }
+    }
+    for(int i=0;i<TSERIE;i++){
+        if(contSerie[i].cont>mayorTres && contSerie[i].cont!=mayorUno && contSerie[i].cont!=mayorDos){
+            mayorTres=contSerie[i].cont;
+        }
+    }
+    printf("Lista de Top 3 de series mas populares\n",'/');
+    printf("-------------\n");
+    printf("Primeras: \n");
+    if(mayorUno){
+        for(int i=0;i<TSERIE;i++){
+            if(contSerie[i].cont==mayorUno){
+                printf("Serie: %s\n",listaSerie[(contSerie[i].idSerie)-1].nombre);
+            }
+        }
+    }else{
+        printf("No hay serie/s para mostrar!!!\n");
+    }
+    printf("-------------\n");
+    printf("Segundas: \n");
+    if(mayorDos){
+        for(int i=0;i<TSERIE;i++){
+            if(contSerie[i].cont==mayorDos){
+                printf("Serie: %s\n",listaSerie[(contSerie[i].idSerie)-1].nombre);
+            }
+        }
+    }else{
+        printf("No hay serie/s para mostrar!!!\n");
+    }
+    printf("-------------\n");
+    printf("Terceras: \n");
+    if(mayorTres){
+        for(int i=0;i<TSERIE;i++){
+            if(contSerie[i].cont==mayorTres){
+                printf("Serie: %s\n",listaSerie[(contSerie[i].idSerie)-1].nombre);
+            }
+        }
+    }else{
+        printf("No hay serie/s para mostrar!!!\n");
+    }
+}

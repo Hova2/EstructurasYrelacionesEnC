@@ -68,7 +68,7 @@ void main()
                 mostrarSerieUsuario(listaSerie,listaUsuario,listaUsuarioSerie,idSerie);
                 break;
             case 6:
-                mostrarSerieMenosPopular(listaSerie,listaUsuarioSerie);
+                mostrarTopTres(listaSerie,listaUsuarioSerie);
                 break;
             case 7:
                 seguir = 'n';
