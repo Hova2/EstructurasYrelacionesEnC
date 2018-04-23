@@ -7,5 +7,10 @@ typedef struct{
     char genero[50];
 }eSerie;
 
+typedef struct{
+    int idSerie;
+    int cont;
+}eSerieContador;
+
 void CrearListadoSeries(eSerie [],int);
 #endif // SERIE_H_INCLUDED

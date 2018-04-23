@@ -32,9 +32,10 @@ void main()
         system("cls");
         fflush(stdin);
 
-        printf("1- Mostrar c/d Usuario con las series que ve.\n");
-
-        printf("7- Salir\n");
+        printf("1 - Mostrar c/d Usuario con las series que ve.\n");
+        printf("2 - Mostrar c/d Serie con los usuarios que la ven.\n");
+        printf("3 - Mostrar Serie%cs menos popular.\n",'/');
+        printf("7 - Salir\n");
 
         scanf("%d",&opcion);
 
@@ -43,28 +44,17 @@ void main()
             case 1:
                 mostrarListaUsuarioSerieDos(listaSerie,listaUsuario,listaUsuarioSerie);
                 break;
+            case 2:
+                mostrarListaSerieUsuario(listaSerie,listaUsuario,listaUsuarioSerie);
+                break;
+            case 3:
+                mostrarSerieMenosPopular(listaSerie,listaUsuarioSerie);
+                break;
             case 7:
                 seguir = 'n';
                 break;
         }
         system("pause");
     }
-
-    /*printf("Listado de series\n");
-    printf("-----------------\n");
-    for(int i=0;i<TSERIE;i++){
-        printf("ID Serie: %d\n",listaSerie[i].idSerie);
-        printf("Nombre  : %s\n",listaSerie[i].nombre);
-        printf("Genero  : %s\n",listaSerie[i].genero);
-        printf("-----------------\n");
-    }
-    printf("Listado de usuarios\n");
-    printf("-----------------\n");
-    for(int i=0;i<TUSUARIO;i++){
-        printf("ID Usuario: %d\n",listaUsuario[i].idUsuario);
-        printf("Nombre    : %s\n",listaUsuario[i].nombre);
-        printf("-----------------\n");
-    }*/
-
     return;
 }

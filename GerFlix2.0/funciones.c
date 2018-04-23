@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 #include "serie.h"
 #include "usuario.h"
 #include "usuarioSerie.h"
@@ -41,5 +42,54 @@ void mostrarListaUsuarioSerieDos(eSerie listaSerie[],eUsuario listaUsuario[],eUs
             }
         }
         printf("-------------\n");
+    }
+}
+
+void mostrarListaSerieUsuario(eSerie listaSerie[],eUsuario listaUsuario[],eUsuarioSerie listaUsuarioSerie[]){
+    printf("Lista de series y los usuarios que la ven\n");
+    printf("-------------\n");
+     for(int i=0;i<TSERIE;i++){
+        printf("Serie: %s\n",listaSerie[i].nombre);
+        printf("-------------\n");
+        for(int j=0;j<TUSUARIOSERIE;j++){
+            if(listaSerie[i].idSerie==listaUsuarioSerie[j].idSerie){
+                for(int k=0;k<TUSUARIO;k++){
+                    if(listaUsuarioSerie[j].idUsuario==listaUsuario[k].idUsuario){
+                        printf("Usuario: %s\n",listaUsuario[k].nombre);
+                        break;
+                    }
+                }
+            }
+        }
+        printf("-------------\n");
+    }
+}
+
+void mostrarSerieMenosPopular(eSerie listaSerie[],eUsuarioSerie listaUsuarioSerie[]){
+    eSerieContador contSerie[TSERIE];
+    int menor=INT_MAX;
+
+    for(int i=0;i<TSERIE;i++){
+        contSerie[i].idSerie=listaSerie[i].idSerie;
+        contSerie[i].cont=0;
+    }
+    for(int i=0;i<TSERIE;i++){
+        for(int j=0;j<TUSUARIOSERIE;j++){
+            if(listaSerie[i].idSerie==listaUsuarioSerie[j].idSerie){
+                contSerie[i].cont++;
+            }
+        }
+    }
+    for(int i=0;i<TSERIE;i++){
+        if(contSerie[i].cont<menor){
+            menor=contSerie[i].cont;
+        }
+    }
+    printf("Lista de serie%cs menos popular\n",'/');
+    printf("-------------\n");
+    for(int i=0;i<TSERIE;i++){
+        if(contSerie[i].cont==menor){
+            printf("Serie: %s\n",listaSerie[(contSerie[i].idSerie)-1].nombre);
+        }
     }
 }
