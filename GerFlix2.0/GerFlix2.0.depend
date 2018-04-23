@@ -31,22 +31,22 @@
 
 1524493797 c:\test\github\estructurasyrelacionesenc\gerflix2.0\funciones.h
 
-1524498423 source:c:\users\iguglielmone_mecon\desktop\juani\utn\adt\estructurasyrelacionesenc\gerflix2.0\serie.c
+1524503923 source:c:\users\iguglielmone_mecon\desktop\juani\utn\adt\estructurasyrelacionesenc\gerflix2.0\serie.c
 	"serie.h"
 
-1524499977 c:\users\iguglielmone_mecon\desktop\juani\utn\adt\estructurasyrelacionesenc\gerflix2.0\serie.h
+1524502795 c:\users\iguglielmone_mecon\desktop\juani\utn\adt\estructurasyrelacionesenc\gerflix2.0\serie.h
 
-1524498423 source:c:\users\iguglielmone_mecon\desktop\juani\utn\adt\estructurasyrelacionesenc\gerflix2.0\usuario.c
+1524503918 source:c:\users\iguglielmone_mecon\desktop\juani\utn\adt\estructurasyrelacionesenc\gerflix2.0\usuario.c
 	"usuario.h"
 
-1524498423 c:\users\iguglielmone_mecon\desktop\juani\utn\adt\estructurasyrelacionesenc\gerflix2.0\usuario.h
+1524502708 c:\users\iguglielmone_mecon\desktop\juani\utn\adt\estructurasyrelacionesenc\gerflix2.0\usuario.h
 
 1524498423 source:c:\users\iguglielmone_mecon\desktop\juani\utn\adt\estructurasyrelacionesenc\gerflix2.0\usuarioserie.c
 	"usuarioSerie.h"
 
 1524498423 c:\users\iguglielmone_mecon\desktop\juani\utn\adt\estructurasyrelacionesenc\gerflix2.0\usuarioserie.h
 
-1524500769 source:c:\users\iguglielmone_mecon\desktop\juani\utn\adt\estructurasyrelacionesenc\gerflix2.0\main.c
+1524504450 source:c:\users\iguglielmone_mecon\desktop\juani\utn\adt\estructurasyrelacionesenc\gerflix2.0\main.c
 	<stdio.h>
 	<stdlib.h>
 	"serie.h"
@@ -54,9 +54,9 @@
 	"usuarioSerie.h"
 	"funciones.h"
 
-1524499564 c:\users\iguglielmone_mecon\desktop\juani\utn\adt\estructurasyrelacionesenc\gerflix2.0\funciones.h
+1524503564 c:\users\iguglielmone_mecon\desktop\juani\utn\adt\estructurasyrelacionesenc\gerflix2.0\funciones.h
 
-1524500600 source:c:\users\iguglielmone_mecon\desktop\juani\utn\adt\estructurasyrelacionesenc\gerflix2.0\funciones.c
+1524504446 source:c:\users\iguglielmone_mecon\desktop\juani\utn\adt\estructurasyrelacionesenc\gerflix2.0\funciones.c
 	<stdio.h>
 	<stdlib.h>
 	<limits.h>

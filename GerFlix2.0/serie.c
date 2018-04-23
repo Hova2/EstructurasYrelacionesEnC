@@ -20,3 +20,12 @@ void CrearListadoSeries(eSerie array[],int cantidad){
      strcpy(array[4].nombre,"Los perdidos");
 
 }
+
+char buscarSerie(eSerie listaSerie[], int idSerie){
+    for(int i=0;i<TSERIE;i++){
+        if(listaSerie[i].idSerie==idSerie){
+            return 1;
+        }
+    }
+    return 0;
+}

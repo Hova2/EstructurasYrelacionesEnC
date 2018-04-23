@@ -7,5 +7,6 @@ typedef struct{
     char nombre[50];
 }eUsuario;
 
+char buscarUsuario(eUsuario [],int);
 
 #endif // USUARIO_H_INCLUDED

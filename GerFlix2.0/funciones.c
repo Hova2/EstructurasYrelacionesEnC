@@ -93,3 +93,45 @@ void mostrarSerieMenosPopular(eSerie listaSerie[],eUsuarioSerie listaUsuarioSeri
         }
     }
 }
+
+void mostrarUsuarioSerie(eSerie listaSerie[],eUsuario listaUsuario[],eUsuarioSerie listaUsuarioSerie[],int idUsuario){
+    if(buscarUsuario(listaUsuario,idUsuario)){
+        printf("Lista de serie%cs de un usuario\n",'/');
+        printf("-------------\n");
+        printf("Usuario: %s\n",listaUsuario[idUsuario-100].nombre);
+        printf("-------------\n");
+        for(int i=0;i<TUSUARIOSERIE;i++){
+            if(listaUsuarioSerie[i].idUsuario==idUsuario){
+                for(int j=0;j<TSERIE;j++){
+                    if(listaUsuarioSerie[i].idSerie==listaSerie[j].idSerie){
+                        printf("Serie: %s\n",listaSerie[j].nombre);
+                        break;
+                    }
+                }
+            }
+        }
+    }else{
+        printf("No existe usuario!!!\n");
+    }
+}
+
+void mostrarSerieUsuario(eSerie listaSerie[],eUsuario listaUsuario[],eUsuarioSerie listaUsuarioSerie[],int idSerie){
+    if(buscarSerie(listaSerie,idSerie)){
+        printf("Lista de usuario%cs de una serie\n",'/');
+        printf("-------------\n");
+        printf("Serie: %s\n",listaSerie[idSerie-1].nombre);
+        printf("-------------\n");
+        for(int i=0;i<TUSUARIOSERIE;i++){
+            if(listaUsuarioSerie[i].idSerie==idSerie){
+                for(int j=0;j<TUSUARIO;j++){
+                    if(listaUsuarioSerie[i].idUsuario==listaUsuario[j].idUsuario){
+                        printf("Usuario: %s\n",listaUsuario[j].nombre);
+                        break;
+                    }
+                }
+            }
+        }
+    }else{
+        printf("No existe la serie!!!\n");
+    }
+}

@@ -13,4 +13,5 @@ typedef struct{
 }eSerieContador;
 
 void CrearListadoSeries(eSerie [],int);
+char buscarSerie(eSerie [],int);
 #endif // SERIE_H_INCLUDED

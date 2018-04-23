@@ -19,6 +19,8 @@ void main()
 {
     char seguir='s';
     int opcion=0;
+    int idUsuario=0;
+    int idSerie=0;
     eSerie listaSerie[TSERIE];
     eUsuario listaUsuario[TUSUARIO];
     eUsuarioSerie listaUsuarioSerie[TUSUARIOSERIE];
@@ -35,6 +37,9 @@ void main()
         printf("1 - Mostrar c/d Usuario con las series que ve.\n");
         printf("2 - Mostrar c/d Serie con los usuarios que la ven.\n");
         printf("3 - Mostrar Serie%cs menos popular.\n",'/');
+        printf("4 - Mostrar Serie%cs de un usuario.\n",'/');
+        printf("5 - Mostrar Usuario%cs de una serie.\n",'/');
+        printf("6 - Mostrar el top 3 de series.\n",'/');
         printf("7 - Salir\n");
 
         scanf("%d",&opcion);
@@ -48,6 +53,21 @@ void main()
                 mostrarListaSerieUsuario(listaSerie,listaUsuario,listaUsuarioSerie);
                 break;
             case 3:
+                mostrarSerieMenosPopular(listaSerie,listaUsuarioSerie);
+                break;
+            case 4:
+                printf("Ingrese un ID de usuario: ");
+                fflush(stdin);
+                scanf("%d",&idUsuario);
+                mostrarUsuarioSerie(listaSerie,listaUsuario,listaUsuarioSerie,idUsuario);
+                break;
+            case 5:
+                printf("Ingrese un ID de serie: ");
+                fflush(stdin);
+                scanf("%d",&idSerie);
+                mostrarSerieUsuario(listaSerie,listaUsuario,listaUsuarioSerie,idSerie);
+                break;
+            case 6:
                 mostrarSerieMenosPopular(listaSerie,listaUsuarioSerie);
                 break;
             case 7:
