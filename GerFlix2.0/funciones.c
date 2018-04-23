@@ -4,7 +4,7 @@
 #include "usuario.h"
 #include "usuarioSerie.h"
 
-void mostrarListaUsuarioSerie(eSerie listaSerie[],eUsuario listaUsuario[],eUsuarioSerie listaUsuarioSerie[]){
+void mostrarListaUsuarioSerieUno(eSerie listaSerie[],eUsuario listaUsuario[],eUsuarioSerie listaUsuarioSerie[]){
     printf("Lista de usuarios y las series que ve\n");
     printf("-------------\n");
     for(int i=0;i<TUSUARIOSERIE;i++){
@@ -18,6 +18,26 @@ void mostrarListaUsuarioSerie(eSerie listaSerie[],eUsuario listaUsuario[],eUsuar
             if(listaUsuarioSerie[i].idSerie==listaSerie[j].idSerie){
                 printf("Serie: %s\n",listaSerie[j].nombre);
                 break;
+            }
+        }
+        printf("-------------\n");
+    }
+}
+
+void mostrarListaUsuarioSerieDos(eSerie listaSerie[],eUsuario listaUsuario[],eUsuarioSerie listaUsuarioSerie[]){
+    printf("Lista de usuarios y las series que ve\n");
+    printf("-------------\n");
+     for(int i=0;i<TUSUARIO;i++){
+        printf("Usuario: %s\n",listaUsuario[i].nombre);
+        printf("-------------\n");
+        for(int j=0;j<TUSUARIOSERIE;j++){
+            if(listaUsuario[i].idUsuario==listaUsuarioSerie[j].idUsuario){
+                for(int k=0;k<TSERIE;k++){
+                    if(listaUsuarioSerie[j].idSerie==listaSerie[k].idSerie){
+                        printf("Serie: %s\n",listaSerie[k].nombre);
+                        break;
+                    }
+                }
             }
         }
         printf("-------------\n");

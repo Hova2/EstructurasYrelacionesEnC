@@ -41,7 +41,7 @@ void main()
         switch(opcion)
         {
             case 1:
-                mostrarListaUsuarioSerie(listaSerie,listaUsuario,listaUsuarioSerie);
+                mostrarListaUsuarioSerieDos(listaSerie,listaUsuario,listaUsuarioSerie);
                 break;
             case 7:
                 seguir = 'n';
